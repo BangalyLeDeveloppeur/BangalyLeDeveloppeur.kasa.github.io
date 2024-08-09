@@ -1,0 +1,44 @@
+.loge-img {
+  //height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
+  img {
+    width: 100%;
+    height: 366px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .logement-arrow {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 95%;
+    background: transparent;
+    padding: 0;
+    margin-top: 110px;
+    button {
+      cursor: pointer;
+      background: transparent;
+      border: navajowhite;
+    }
+  }
+  i {
+    font-size: 6em;
+    color: white;
+    transform: rotate(270deg);
+  }
+  .chevron-droite {
+    font-size: 6em;
+    color: white;
+    transform: rotate(4deg);
+  }
+  span{
+    font-size: 1em;
+    color: white;
+    position: absolute;
+    margin-top: 310px;
+    margin-left: 50%;
+  }
+}

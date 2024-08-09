@@ -1,0 +1,15 @@
+.host {
+  display: flex;
+  justify-content: end;
+  margin-top: -39px;
+  gap: 14px;
+ 
+  .fa-star.filled {
+    color: #ff6060; /* Couleur des étoiles remplies */
+    font-size: 1.5em;
+  }
+  .fa-star.empty {
+    color: #e3e3e3; /* Couleur des étoiles vides */
+    font-size: 1.5em;
+  }
+}

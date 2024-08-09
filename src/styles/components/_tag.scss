@@ -1,0 +1,23 @@
+.tag_groupe{
+    display: flex;
+    margin: 15px 0;
+    //gap: 10px;
+
+}
+.tag{
+    width: 7%;
+    height: 30px;
+    background: rgb(255,96,96);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span {
+    color: white;
+    font-size: 0.9em;
+    margin-right: 3px;
+    margin-left: 3px;
+   
+}

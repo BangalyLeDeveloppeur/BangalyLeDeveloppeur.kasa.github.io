@@ -1,0 +1,32 @@
+.part::before{
+  content: " ";
+  position: absolute;
+  background: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.part {
+  border-radius: 30px;
+  margin: 36px 0;
+  background: url(../../assets/images/img.png) center/cover;
+  height: 230px;
+  position: relative;
+
+  p {
+    margin-top: 90px;
+    font-size: 3em;
+    color: white;
+    margin-left: 35%;
+    font-weight: bold;
+  }
+}
+
+p {
+  font-size: 1.2em;
+  color: white;
+  position: absolute;
+}

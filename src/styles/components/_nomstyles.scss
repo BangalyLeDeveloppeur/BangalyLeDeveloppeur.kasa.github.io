@@ -1,0 +1,28 @@
+.nom {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  .nom-conteneur {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -130px;
+    height: 80px;
+  }
+  p {
+  //
+    color: #ff6060;
+    margin-left: -110px;
+    width: 5%;
+    text-align: right;
+    font-weight: 500;
+  }
+
+
+  img {
+    width: 60px;
+    height: 60px;
+    background-color: #c4c4c4;
+    border-radius: 38px;
+    margin-top: -15px;
+  }
+}

@@ -1,0 +1,298 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Inter-Medium.ttf);
+}
+* {
+  padding: 5px;
+  margin: 0;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  font-family: "font-1", sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+  body h1 {
+    font-size: 2.3em;
+  }
+  body .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .navigation ul {
+    gap: 15px;
+  }
+  body .navigation ul li {
+    font-size: 1.06em;
+  }
+  body .navigation * {
+    padding: 0;
+    margin: 0;
+  }
+  body .navigation img {
+    width: 40%;
+  }
+}
+
+li {
+  color: black;
+  list-style-type: none;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.navigation ul .nav-active {
+  position: relative;
+}
+.navigation ul .nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  position: absolute;
+  border-radius: 10px;
+  background-color: black;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@-webkit-keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+.part {
+  border-radius: 30px;
+  margin: 50px 0;
+  background: url(../../assets/images/img.png) center/cover;
+  height: 280px;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+.apropos_img {
+  border-radius: 30px;
+  margin: 50px 0;
+  background: url(../../assets/images/kalen.png) center/cover;
+  height: 280px;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgb(255, 96, 96);
+  margin-left: 10%;
+  height: 32px;
+}
+.description h2 {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+.description span {
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+.description span:active {
+  color: white;
+  font-size: 3em;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.annonce p {
+  display: none;
+  color: rgb(100, 98, 98);
+  font-size: 1.5em;
+}
+
+.footerstyles {
+  text-align: center;
+  height: 200px;
+  background-color: black;
+}
+.footerstyles p {
+  color: white;
+  font-size: 1.5em;
+}
+.footerstyles img {
+  padding: 60px 0 20px;
+}
+
+.errorpage {
+  padding: 130px 0;
+  text-align: center;
+}
+.errorpage h3 {
+  font-size: 12em;
+  color: rgb(255, 96, 96);
+}
+.errorpage p {
+  font-size: 2em;
+  color: rgb(255, 96, 96);
+  padding: 100px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+  background: rgb(246, 246, 246);
+  border-radius: 20px;
+}
+.gallery img {
+  width: 100%;
+  height: 86%;
+  border-radius: 20px;
+}
+.gallery h4 {
+  margin-top: -70px;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+}
+
+.loge-img {
+  height: 400px;
+}
+.loge-img img {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.loge-img .logement-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-top: -250px;
+}
+.loge-img i {
+  font-size: 6em;
+  color: white;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+.loge-img .chevron-droite {
+  font-size: 6em;
+  color: white;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+}
+
+.logoement-title {
+  color: rgb(255, 96, 96);
+  font-size: 2em;
+}
+
+.logement-ville {
+  font-size: 2em;
+}
+
+.tag_groupe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  width: 11%;
+  height: 25px;
+  background: rgb(255, 96, 96);
+  border-radius: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tag span {
+  color: white;
+  font-size: 1.8em;
+}
+
+.logementDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.description-contenair {
+  height: 50px;
+  width: 50%;
+  background: red;
+}
+.description-contenair .chevron {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}/*# sourceMappingURL=index.css.map */

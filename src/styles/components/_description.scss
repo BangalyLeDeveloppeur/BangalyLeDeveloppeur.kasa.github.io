@@ -1,0 +1,64 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  
+  background: rgb(255, 96, 96);
+  padding: 0 18px 0 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+ 
+  h2 {
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+  }
+  button {
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease-out;
+  }
+  button:active {
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    transform: rotate(180deg);
+  }
+  
+    
+}
+
+.annonce {
+  margin-bottom: 20px;
+  
+  p {
+    color: rgb(100, 98, 98);
+    font-size: 0.9em;
+    width: 70%;
+    padding: 20px;
+  }
+  .chevron-cadr{
+   
+    height: 25px;
+    padding: 0 15px 25px 15px;
+    background-color: rgba(251, 251, 251);
+    margin-top: -21px;
+  }
+}
+.annonceSecurite {
+ 
+  width: 80%;
+  height: 100px;
+  p {
+    color: rgb(100, 98, 98);
+    font-size: 0.8em;
+    width: 70%;
+    padding: 15px 32px;
+  }
+}
+.apropos-descrition{
+  padding: 0 110px;
+}
