@@ -1,6 +1,6 @@
 import React from "react";
-import Partout from "../components/Partout";
-import Cadre from "../components/Cadre";
+import Partout from "../components/partout/Partout";
+import Cadre from "../components/Cadre/Cadre";
 import livres from "../data/livres.json";
 
 const Home = () => {

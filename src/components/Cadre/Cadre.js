@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import OneCadre from "./OneCadre";
+import OneCadre from "../oncadre/OneCadre";
 
 const Cadre = ({ livres }) => {
   return livres.map((Logement) => (

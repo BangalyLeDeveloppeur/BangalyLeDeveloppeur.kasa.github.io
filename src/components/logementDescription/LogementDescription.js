@@ -1,5 +1,5 @@
 import React from "react";
-import Collapse from "./Collapse";
+import Collapse from "../collapse/Collapse";
 
 const LogementDescription = ({ logement }) => {
   return (
@@ -24,13 +24,12 @@ const LogementDescription = ({ logement }) => {
               title={"Equipements"}
               content={
                 <div className="chevron-cadred">
-                <ul>
-                  {logement["equipments"].map((eq) => (
-                    <li key={eq}>{eq} </li>
-                  ))}
-                </ul>
-                   </div>
-                  
+                  <ul>
+                    {logement["equipments"].map((eq) => (
+                      <li key={eq}>{eq} </li>
+                    ))}
+                  </ul>
+                </div>
               }
             />
           )}

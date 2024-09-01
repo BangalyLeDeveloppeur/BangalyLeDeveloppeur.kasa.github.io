@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./styles/index.scss";
-import Rooter from "./Rooter";
+import Rooter from "../src/Rooter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

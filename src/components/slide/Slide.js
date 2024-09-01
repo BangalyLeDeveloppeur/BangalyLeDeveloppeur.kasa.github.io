@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const Slide = ({ logement }) => {
   const pictures = logement.pictures;
+  console.log(pictures)
 
   const [currentIndex, setCurrentIndex] = useState(0);
   // j'utilise userState pour manipiler les elements dans mon tableau//

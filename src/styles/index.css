@@ -1,50 +1,26 @@
+@charset "UTF-8";
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Inter-Medium.ttf);
+  src: url(../assets/fonts/Montserrat-Medium.ttf);
 }
 * {
-  padding: 5px;
+  padding: 0;
   margin: 0;
 }
 
 body {
   background: rgb(255, 255, 255);
   font-family: "font-1", sans-serif;
+  padding: 30px;
 }
 body a {
   text-decoration: none;
-}
-@media screen and (max-width: 700px) {
-  body h1 {
-    font-size: 2.3em;
-  }
-  body .gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body .navigation ul {
-    gap: 15px;
-  }
-  body .navigation ul li {
-    font-size: 1.06em;
-  }
-  body .navigation * {
-    padding: 0;
-    margin: 0;
-  }
-  body .navigation img {
-    width: 40%;
-  }
 }
 
 li {
   color: black;
   list-style-type: none;
+  font-size: 1.3em;
 }
 
 .navigation {
@@ -75,11 +51,11 @@ li {
 }
 .navigation ul .nav-active::after {
   content: "";
-  height: 4px;
+  height: 2px;
   width: 0;
   position: absolute;
   border-radius: 10px;
-  background-color: black;
+  background-color: rgb(141, 136, 136);
   bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -98,25 +74,45 @@ li {
   }
 }
 
-.part {
-  border-radius: 30px;
-  margin: 50px 0;
-  background: url(../../assets/images/img.png) center/cover;
-  height: 280px;
+.part::before {
+  content: " ";
+  position: absolute;
+  background: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
 }
 
-h1 {
-  margin-top: 100px;
+.part {
+  border-radius: 30px;
+  margin: 36px 0;
+  background: url(../../assets/images/img.png) center/cover;
+  height: 230px;
+  position: relative;
+}
+.part p {
+  margin-top: 90px;
   font-size: 3em;
   color: white;
-  text-align: center;
+  margin-left: 35%;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2em;
+  color: white;
+  position: absolute;
 }
 
 .apropos_img {
-  border-radius: 30px;
+  border-radius: 20px;
   margin: 50px 0;
   background: url(../../assets/images/kalen.png) center/cover;
-  height: 280px;
+  -webkit-filter: brightness(0.55) saturate(1.4) contrast(0.75);
+          filter: brightness(0.55) saturate(1.4) contrast(0.75);
+  height: 250px;
 }
 
 .description {
@@ -129,31 +125,62 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 52px;
   background: rgb(255, 96, 96);
-  margin-left: 10%;
-  height: 32px;
+  padding: 0 18px 0 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 .description h2 {
-  font-size: 2em;
+  font-size: 1.3em;
   color: white;
   text-align: center;
 }
-.description span {
+.description button {
   color: white;
   font-size: 2em;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
-.description span:active {
-  color: white;
+.description button:active {
+  color: rgb(255, 255, 255);
   font-size: 3em;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
+.annonce {
+  margin-bottom: 20px;
+}
 .annonce p {
-  display: none;
   color: rgb(100, 98, 98);
-  font-size: 1.5em;
+  font-size: 0.9em;
+  width: 70%;
+  padding: 20px;
+}
+.annonce .chevron-cadr {
+  height: 25px;
+  padding: 0 15px 25px 15px;
+  background-color: rgb(251, 251, 251);
+  margin-top: -21px;
+}
+
+.annonceSecurite {
+  width: 80%;
+  height: 100px;
+}
+.annonceSecurite p {
+  color: rgb(100, 98, 98);
+  font-size: 0.8em;
+  width: 70%;
+  padding: 15px 32px;
+}
+
+.apropos-descrition {
+  padding: 0 110px;
 }
 
 .footerstyles {
@@ -164,6 +191,7 @@ h1 {
 .footerstyles p {
   color: white;
   font-size: 1.5em;
+  margin-left: 40%;
 }
 .footerstyles img {
   padding: 60px 0 20px;
@@ -181,37 +209,23 @@ h1 {
   font-size: 2em;
   color: rgb(255, 96, 96);
   padding: 100px 0;
+  position: relative;
 }
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 30px;
-  background: rgb(246, 246, 246);
-  border-radius: 20px;
-}
-.gallery img {
-  width: 100%;
-  height: 86%;
-  border-radius: 20px;
-}
-.gallery h4 {
-  margin-top: -70px;
-  font-size: 1.5em;
-  color: white;
-  text-align: center;
+.errorpage .retourne {
+  color: black;
 }
 
 .loge-img {
-  height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
 }
 .loge-img img {
-  position: relative;
   width: 100%;
-  height: 400px;
+  height: 366px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
 }
 .loge-img .logement-arrow {
   display: -webkit-box;
@@ -220,8 +234,16 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
-  margin-top: -250px;
+  position: absolute;
+  width: 95%;
+  background: transparent;
+  padding: 0;
+  margin-top: 110px;
+}
+.loge-img .logement-arrow button {
+  cursor: pointer;
+  background: transparent;
+  border: navajowhite;
 }
 .loge-img i {
   font-size: 6em;
@@ -235,28 +257,42 @@ h1 {
   -webkit-transform: rotate(4deg);
           transform: rotate(4deg);
 }
-
-.logoement-title {
-  color: rgb(255, 96, 96);
-  font-size: 2em;
+.loge-img span {
+  font-size: 1em;
+  color: white;
+  position: absolute;
+  margin-top: 310px;
+  margin-left: 50%;
 }
 
-.logement-ville {
-  font-size: 2em;
+.logement {
+  margin: 30px 0 50px;
+}
+.logement .logoement-title {
+  color: rgb(255, 96, 96);
+  font-size: 1.3em;
+}
+.logement .logement-ville {
+  font-size: 1.2em;
+  color: black;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 10px 0;
+  font-weight: bold;
 }
 
 .tag_groupe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  margin: 15px 0;
 }
 
 .tag {
-  width: 11%;
-  height: 25px;
+  width: 7%;
+  height: 30px;
   background: rgb(255, 96, 96);
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,31 +304,322 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
 }
-.tag span {
+
+span {
   color: white;
-  font-size: 1.8em;
+  font-size: 0.9em;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 
 .logementDescription {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.description-contenair {
-  height: 50px;
-  width: 50%;
-  background: red;
+.logemen {
+  margin: 35px 0 0;
+  padding: 0;
 }
-.description-contenair .chevron {
+.logemen .apropos-descrition {
+  padding: 0;
+}
+
+.chevron {
+  width: 48%;
+}
+.chevron .description {
+  margin-left: 0;
+}
+.chevron .chevron-cadre {
+  padding: 0 15px 25px 15px;
+  background-color: rgb(251, 251, 251);
+  margin-top: -21px;
+}
+.chevron .chevron-cadre p {
+  padding: 18px;
+  color: black;
+  position: static;
+  text-align: left;
+  font-size: 0.9em;
+}
+.chevron .chevron-cadred {
+  width: 96.5%;
+  padding: 0 15px 25px 15px;
+  background-color: rgb(251, 251, 251);
+  margin-top: -21px;
+}
+.chevron .chevron-cadred ul {
+  padding: 18px;
+}
+.chevron .chevron-cadred ul li {
+  font-size: 0.8em;
+}
+
+.host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: -39px;
+  gap: 14px;
+}
+.host .fa-star.filled {
+  color: #ff6060; /* Couleur des étoiles remplies */
+  font-size: 1.5em;
+}
+.host .fa-star.empty {
+  color: #e3e3e3; /* Couleur des étoiles vides */
+  font-size: 1.5em;
+}
+
+.nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nom .nom-conteneur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-top: -130px;
+  height: 80px;
+}
+.nom p {
+  color: #ff6060;
+  margin-left: -110px;
+  width: 5%;
+  text-align: right;
+  font-weight: 500;
+}
+.nom img {
+  width: 60px;
+  height: 60px;
+  background-color: #c4c4c4;
+  border-radius: 38px;
+  margin-top: -15px;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.7em;
+    margin-left: 5px;
+    text-align: left;
+  }
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .gallery img {
+    height: 300px;
+  }
+  .gallery a {
+    height: 300px;
+  }
+  .gallery p {
+    width: 70%;
+    font-size: 1.2em;
+    margin-top: -70px;
+  }
+  .navigation ul {
+    gap: 15px;
+  }
+  .navigation ul li {
+    font-size: 1.06em;
+  }
+  .navigation * {
+    padding: 0;
+    margin: 0;
+  }
+  .navigation img {
+    width: 40%;
+  }
+  .navigation .logoement-title {
+    font-size: 1.7em;
+  }
+  .nom .nom-conteneur {
+    height: 62px;
+    margin-top: 0;
+  }
+  .nom .nom-conteneur .host-cercle {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+  }
+  .nom .nom-conteneur h2 {
+    font-size: 0.9em;
+  }
+  .nom .nom-conteneur p {
+    width: 22%;
+  }
+  .host {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-top: -56px;
+    gap: 2px;
+  }
+  .host span {
+    padding: 0;
+  }
+  .tag_groupe {
+    margin: 50px 0;
+  }
+  .tag {
+    width: 28%;
+    padding: 0;
+    font-size: 0.7em;
+    height: 23px;
+  }
+  .tag span {
+    font-size: 0.75em;
+  }
+  .logementDescription {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .logementDescription .description-contenair {
+    height: 35px;
+    width: 100%;
+  }
+  .logementDescription .description-contenair .chevron {
+    padding: 0;
+  }
+  .logementDescription .description-contenair .chevron p {
+    font-size: 0.75em;
+  }
+  .chevron {
+    width: 100%;
+  }
+  .chevron .description {
+    width: 90%;
+    margin-left: 0;
+  }
+  .annonce {
+    margin-left: 0;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .annonce p {
+    padding: 15px;
+    width: 80%;
+  }
+  .annonce .chevron-cadr {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    background-color: rgba(226, 224, 222, 0.219);
+    margin-top: -21px;
+  }
+  .chevron .chevron-cadre {
+    width: 93%;
+  }
+  .chevron .chevron-cadre p {
+    font-size: 1.1em;
+  }
+  .nom img {
+    height: 60px;
+    width: 60px;
+    margin-top: -10px;
+  }
+  .part {
+    height: 150px;
+    border-radius: 10px;
+  }
+  .part p {
+    font-size: 1.9em;
+    margin-left: 5px;
+    text-align: left;
+    margin-top: 40px;
+  }
+  .loge-img i {
+    font-size: 3em;
+  }
+  .loge-img .chevron-droite {
+    font-size: 3em;
+  }
+  .loge-img img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .logement {
+    margin: 0;
+  }
+  .footerstyles p {
+    font-size: 0.9em;
+    margin-left: 25%;
+    width: 30%;
+  }
+  .apropos-descrition {
+    padding: 0;
+  }
+  .annonceSecurite {
+    width: 100%;
+    height: 150px;
+    margin-left: 0;
+    margin-top: -21px;
+  }
+  .annonceSecurite p {
+    padding: 15px 28px;
+    width: 80%;
+  }
+}
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 12px;
+  gap: 35px;
+  padding: 40px;
+  background: rgb(246, 246, 246);
+}
+.gallery img {
+  width: 100%;
+  height: 570px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery p {
+  margin-top: -85px;
+  font-size: 1.5em;
+  color: white;
+  margin-left: 17px;
+  text-align: left;
+  width: 20%;
+}
+.gallery a {
+  width: 100%;
+  height: 570px;
 }/*# sourceMappingURL=index.css.map */

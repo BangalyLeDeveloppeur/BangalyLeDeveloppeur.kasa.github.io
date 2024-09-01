@@ -1,18 +1,19 @@
 @use "./settings";
-@use "./components/navigation";
-@use "./components/partout";
-@use "./components/photoapropos";
-@use "./components/description";
-@use "./components/footer";
-@use "./components/error";
-@use "./components/cadre";
-@use "./components/slide";
-@use "./components/logementtitle";
-@use "./components/tag";
-@use "./components/logementDescription";
-@use "./components/logementHost";
-@use "./components/nomstyles";
+@use "../components/nav/navigation";
+@use "../components/partout/partout";
+@use "../components/photoapropos/photoapropos";
+@use "../components/description/description";
+@use "../components/footer/footer";
+@use "../components/errorr/error";
+
+@use "../components/slide/slide";
+@use "../components/logementtitle/logementtitle";
+@use "../components/tag/tag";
+@use "../components/logementDescription/logementDescription";
+@use "../components/host/logementHost";
+@use "../components/nom/nomstyles";
 @use "./components/mediaqueri";
+@use "../components/Cadre/cadre"
 
 
 

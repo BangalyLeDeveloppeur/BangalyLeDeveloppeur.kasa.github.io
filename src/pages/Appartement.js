@@ -1,10 +1,10 @@
-import Slide from "../components/Slide";
-import LogementTitle from "../components/LogementTitle";
-import Tag from "../components/Tag";
-import LogementHost from "../components/LogementHost";
-import LogementDescription from "../components/LogementDescription";
+import Slide from "../components/slide/Slide";
+import LogementTitle from "../components/logementtitle/LogementTitle";
+import Tag from "../components/tag/Tag";
+import LogementHost from "../components/host/LogementHost";
+import LogementDescription from "../components/logementDescription/LogementDescription";
 import appartements from "../data/livres.json";
-import Nom from "../components/Nom";
+import Nom from "../components/nom/Nom";
 
 console.log(appartements);
 
